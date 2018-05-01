@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:mContext="br.com.android.app.liuvasconcelos.costumerloyalty.introductionPage.IntroPageFragment">
+
+    <data>
+        <variable
+            name="handler"
+            type="liuvasconcelos.costumerloyalty.introductionPage.IntroPageFragment"/>
+    </data>
 
     <LinearLayout
         android:id="@+id/introduction_page_linear_layout"
@@ -36,7 +41,9 @@
                 android:id="@+id/introduction_page_first_line_of_squads"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:onClick="@{handler::goToLoginPage}">
 
                 <LinearLayout
                     android:id="@+id/introduction_page_login_option"
@@ -64,7 +71,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/introduction_page_color_2"
-                    android:layout_weight="1" >
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:onClick="@{handler::goToRegistrationPage}">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -106,4 +115,5 @@
 
     </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+
+</layout>

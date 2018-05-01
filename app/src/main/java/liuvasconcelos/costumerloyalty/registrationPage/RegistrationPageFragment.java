@@ -1,4 +1,4 @@
-package liuvasconcelos.costumerloyalty.login;
+package liuvasconcelos.costumerloyalty.registrationPage;
 
 
 import android.content.Intent;
@@ -12,19 +12,18 @@ import android.view.ViewGroup;
 
 import liuvasconcelos.costumerloyalty.R;
 import liuvasconcelos.costumerloyalty.databinding.LoginFragBinding;
-import liuvasconcelos.costumerloyalty.forgetPasswordPage.ForgetPasswordPageActivity;
+import liuvasconcelos.costumerloyalty.databinding.RegistrationPageFragBinding;
 import liuvasconcelos.costumerloyalty.mainPage.MainPageActivity;
-import liuvasconcelos.costumerloyalty.registrationPage.RegistrationPageActivity;
 
-public class LoginFragment extends Fragment implements LoginContract.View{
+public class RegistrationPageFragment extends Fragment implements RegistrationPageContract.View{
 
-    private LoginContract.Presenter mPresenter;
-    private LoginFragBinding mLoginFragBinding;
+    private RegistrationPageContract.Presenter mPresenter;
+    private RegistrationPageFragBinding mRegistrationPageFragBinding;
 
-    public LoginFragment() {}
+    public RegistrationPageFragment() {}
 
-    public static LoginFragment newInstance() {
-        return new LoginFragment();
+    public static RegistrationPageFragment newInstance() {
+        return new RegistrationPageFragment();
     }
 
     @Override
@@ -34,27 +33,21 @@ public class LoginFragment extends Fragment implements LoginContract.View{
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mLoginFragBinding = DataBindingUtil.inflate(inflater, R.layout.login_frag,container,false);
-        mLoginFragBinding.setHandler(this);
+        mRegistrationPageFragBinding = DataBindingUtil.inflate(inflater, R.layout.registration_page_frag,container,false);
+        mRegistrationPageFragBinding.setHandler(this);
 
-        return mLoginFragBinding.getRoot();
+        return mRegistrationPageFragBinding.getRoot();
     }
 
     @Override
-    public void goToForgetPasswordPage(android.view.View view) {
-        Intent intent = new Intent(getContext(), ForgetPasswordPageActivity.class);
-        startActivity(intent);
+    public void setPresenter(RegistrationPageContract.Presenter presenter) {
+        mPresenter = presenter;
     }
 
     @Override
     public void goToMainPage(android.view.View view) {
         Intent intent = new Intent(getContext(), MainPageActivity.class);
         startActivity(intent);
-    }
-
-    @Override
-    public void setPresenter(LoginContract.Presenter presenter) {
-        mPresenter = presenter;
     }
 
     @Override

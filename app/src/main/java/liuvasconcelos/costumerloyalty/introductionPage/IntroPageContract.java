@@ -1,15 +1,16 @@
-package liuvasconcelos.costumerloyalty.login;
+package liuvasconcelos.costumerloyalty.introductionPage;
 
 
 import liuvasconcelos.costumerloyalty.BasePresenter;
 import liuvasconcelos.costumerloyalty.BaseView;
 
-public interface LoginContract {
+public interface IntroPageContract {
     interface View extends BaseView<Presenter> {
-        void goToForgetPasswordPage(android.view.View view);
-        void goToMainPage(android.view.View view);
-    }
+        //fragment methods
+        void goToLoginPage(android.view.View view);
+        void goToRegistrationPage(android.view.View view);
 
+    }
     interface Presenter extends BasePresenter {
         //presenter methods
     }
