@@ -24,4 +24,9 @@
     <string name="my_acount">Minha conta</string>
     <string name="logout">Sair</string>
     <string name="last_requests">Últimos pedidos</string>
+    <string name="toast">E-mail ou senha incorretos</string>
+    <string name="sent_email_toast">Nova senha enviada para o email fornecido</string>
+    <string name="impossible_to_send_email_toast">Não foi possível resetar a senha</string>
+    <string name="email_subject">MY MENU - Recuperação de senha</string>
+    <string name="email_body">Nova senha: 123456</string>
 </resources>

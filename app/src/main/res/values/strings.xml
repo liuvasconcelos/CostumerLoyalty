@@ -23,4 +23,9 @@
     <string name="my_acount">My acount</string>
     <string name="logout">Logout</string>
     <string name="last_requests">Last requests</string>
+    <string name="toast">Invalid e-mail or password</string>
+    <string name="sent_email_toast">New password sent for your email</string>
+    <string name="impossible_to_send_email_toast">It is impossible to reset password</string>
+    <string name="email_subject">MY MENU - Reset Password</string>
+    <string name="email_body">New Password: 123456</string>
 </resources>

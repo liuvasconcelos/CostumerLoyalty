@@ -9,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import liuvasconcelos.costumerloyalty.R;
 import liuvasconcelos.costumerloyalty.databinding.LoginFragBinding;
@@ -48,8 +49,22 @@ public class LoginFragment extends Fragment implements LoginContract.View{
 
     @Override
     public void goToMainPage(android.view.View view) {
-        Intent intent = new Intent(getContext(), MainPageActivity.class);
-        startActivity(intent);
+        if(credentialAreCorrect()) {
+            Intent intent = new Intent(getContext(), MainPageActivity.class);
+            startActivity(intent);
+        }else {
+            showIncorrectCrendentialToast();
+        }
+
+    }
+
+    private Boolean credentialAreCorrect() {
+        //TODO: FAZER CONEXÃO COM BANCO E VERIFICAR CREDENCIAIS
+        return false;
+    }
+
+    private void showIncorrectCrendentialToast() {
+        Toast.makeText(getContext(), R.string.toast, Toast.LENGTH_SHORT).show();
     }
 
     @Override

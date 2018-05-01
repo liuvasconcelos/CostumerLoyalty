@@ -80,7 +80,62 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/main_page_still_access_to_go_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/introduction_page_color_background"
+            android:visibility="gone">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/main_page_introduction_1"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:fontFamily="monospace"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:text="2"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="@string/main_page_introduction_2"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:fontFamily="monospace"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/main_page_introduction_3"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:fontFamily="monospace"/>
+
+        </LinearLayout>
     </LinearLayout>
 
 

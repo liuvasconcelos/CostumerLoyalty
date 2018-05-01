@@ -6,8 +6,7 @@ import liuvasconcelos.costumerloyalty.BaseView;
 
 public interface ForgetPasswordPageContract {
     interface View extends BaseView<Presenter> {
-        //fragment methods
-
+        void sendEmail(android.view.View view);
     }
     interface Presenter extends BasePresenter {
         //presenter methods
