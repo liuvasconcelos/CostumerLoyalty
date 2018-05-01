@@ -1,4 +1,5 @@
 <resources>
+    <string name="app_name">Costumer Loyalty</string>
     <string name="logo_text">My menu</string>
     <string name="register_text">Registration</string>
     <string name="find_us_text">Find us</string>

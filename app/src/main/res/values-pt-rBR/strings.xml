@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Fidelização de Clientes</string>
     <string name="logo_text">My menu</string>
     <string name="register_text">Cadastro</string>
     <string name="find_us_text">Contato</string>
