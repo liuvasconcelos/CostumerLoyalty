@@ -29,4 +29,7 @@
     <string name="impossible_to_send_email_toast">Não foi possível resetar a senha</string>
     <string name="email_subject">MY MENU - Recuperação de senha</string>
     <string name="email_body">Nova senha: 123456</string>
+
+    <string name="open">Abrir</string>
+    <string name="close">Fechar</string>
 </resources>

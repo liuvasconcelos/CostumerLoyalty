@@ -28,4 +28,7 @@
     <string name="impossible_to_send_email_toast">It is impossible to reset password</string>
     <string name="email_subject">MY MENU - Reset Password</string>
     <string name="email_body">New Password: 123456</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 </resources>

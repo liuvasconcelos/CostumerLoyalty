@@ -1,13 +1,18 @@
 package liuvasconcelos.costumerloyalty.mainPage;
 
 import android.os.Bundle;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.WindowManager;
 
 import liuvasconcelos.costumerloyalty.ActivityUtils;
 import liuvasconcelos.costumerloyalty.R;
 
 public class MainPageActivity extends AppCompatActivity {
+    private ActionBarDrawerToggle mDrawer;
+    private Toolbar mToolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,5 +29,20 @@ public class MainPageActivity extends AppCompatActivity {
         }
 
         new MainPagePresenter(mainPageFragment);
+
+        if (mToolbar != null){
+            setSupportActionBar(mToolbar);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
+        }
+
+//        mDrawer = new ActionBarDrawerToggle(this, mDrawer, mToolbar, R.string.open, R.string.close);
+//        mDrawer.setDrawerListener(mActionBarDrawerToggle);
+//
+//        mFragmentTransaction = getSupportFragmentManager().beginTransaction();
+//        mFragmentTransaction.add(R.id.main_container, new HomeFragment());
+//        mFragmentTransaction.commit();
+//        getSupportActionBar().setTitle("Home");
+
     }
 }
