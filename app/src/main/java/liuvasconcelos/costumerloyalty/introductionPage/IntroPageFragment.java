@@ -36,11 +36,6 @@ public class IntroPageFragment extends Fragment implements IntroPageContract.Vie
         mIntroductionPageFragBinding = DataBindingUtil.inflate(inflater, R.layout.introduction_page_frag,container,false);
         mIntroductionPageFragBinding.setHandler(this);
 
-
-
-//        mEmail = mLoginFragBinding.loginFragEmail;
-//        mPassword = mLoginFragBinding.loginFragPassword;
-
         return mIntroductionPageFragBinding.getRoot();
     }
 

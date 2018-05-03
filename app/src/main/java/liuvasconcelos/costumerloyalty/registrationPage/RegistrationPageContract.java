@@ -6,9 +6,11 @@ import liuvasconcelos.costumerloyalty.BaseView;
 
 public interface RegistrationPageContract {
     interface View extends BaseView<Presenter> {
-        void goToMainPage(android.view.View view);
+        void registerUser(android.view.View view);
     }
     interface Presenter extends BasePresenter {
-        //presenter methods
+        Boolean registerUser(String name, String cpf,
+                             String phoneNumber, String email,
+                             String password);
     }
 }

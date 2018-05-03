@@ -9,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import liuvasconcelos.costumerloyalty.R;
 import liuvasconcelos.costumerloyalty.databinding.LoginFragBinding;
@@ -44,10 +45,28 @@ public class RegistrationPageFragment extends Fragment implements RegistrationPa
         mPresenter = presenter;
     }
 
-    @Override
-    public void goToMainPage(android.view.View view) {
+    private void goToMainPage() {
         Intent intent = new Intent(getContext(), MainPageActivity.class);
         startActivity(intent);
+    }
+
+    @Override
+    public void registerUser(android.view.View view) {
+        String name = mRegistrationPageFragBinding.name.getText().toString();
+        String cpf = mRegistrationPageFragBinding.cpf.getText().toString();
+        String phoneNumber =mRegistrationPageFragBinding.phone.getText().toString();
+        String email = mRegistrationPageFragBinding.email.getText().toString();
+        String password = mRegistrationPageFragBinding.password.getText().toString();
+
+        if(mPresenter.registerUser(name, cpf, phoneNumber, email, password)) {
+            goToMainPage();
+        }else {
+            showToast();
+        }
+    }
+
+    private void showToast() {
+        Toast.makeText(getContext(), R.string.impossible_to_register_toast, Toast.LENGTH_SHORT).show();
     }
 
     @Override

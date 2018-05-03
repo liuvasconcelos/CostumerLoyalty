@@ -16,6 +16,7 @@ import liuvasconcelos.costumerloyalty.databinding.LoginFragBinding;
 import liuvasconcelos.costumerloyalty.forgetPasswordPage.ForgetPasswordPageActivity;
 import liuvasconcelos.costumerloyalty.mainPage.MainPageActivity;
 import liuvasconcelos.costumerloyalty.registrationPage.RegistrationPageActivity;
+import liuvasconcelos.costumerloyalty.registrationPage.RegistrationPageContract;
 
 public class LoginFragment extends Fragment implements LoginContract.View{
 
@@ -59,8 +60,10 @@ public class LoginFragment extends Fragment implements LoginContract.View{
     }
 
     private Boolean credentialAreCorrect() {
-        //TODO: FAZER CONEXÃO COM BANCO E VERIFICAR CREDENCIAIS
-        return false;
+        String email = mLoginFragBinding.loginEmail.getText().toString();
+        String password = mLoginFragBinding.loginPassword.getText().toString();
+
+        return mPresenter.checkCredentials(email, password);
     }
 
     private void showIncorrectCrendentialToast() {

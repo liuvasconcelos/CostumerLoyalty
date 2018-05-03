@@ -59,6 +59,7 @@
             android:fontFamily="monospace"/>
 
         <EditText
+            android:id="@+id/login_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
@@ -81,6 +82,7 @@
             android:fontFamily="monospace"/>
 
         <EditText
+            android:id="@+id/login_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"

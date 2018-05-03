@@ -11,6 +11,7 @@ public interface LoginContract {
     }
 
     interface Presenter extends BasePresenter {
-        //presenter methods
+        Boolean checkCredentials(String email,
+                                 String password);
     }
 }

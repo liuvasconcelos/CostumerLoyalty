@@ -36,6 +36,7 @@ public class MainPageFragment extends Fragment implements MainPageContract.View{
         mMainPageFragBinding = DataBindingUtil.inflate(inflater, R.layout.main_page_frag,container,false);
         mMainPageFragBinding.setHandler(this);
 
+        mMainPageFragBinding.username.setText("Teste");
         return mMainPageFragBinding.getRoot();
     }
 

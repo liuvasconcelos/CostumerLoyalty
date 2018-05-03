@@ -14,10 +14,11 @@
     <string name="phone">Phone</string>
     <string name="phone_request">Enter your phone number</string>
     <string name="forget_password_request">Please type your e-mail for us to send you a new password:</string>
-    <string name="main_page_introduction_1">Hello, Tiago! You have</string>
+    <string name="main_page_introduction_1">Hello, </string>
+    <string name="main_page_introduction_1_1">! You have</string>
     <string name="main_page_introduction_2">access! </string>
     <string name="main_page_introduction_3">When you have 10, we give you a free dinner!</string>
-    <string name="main_page_win_dinner_1">Hello, Tiago!</string>
+    <string name="main_page_win_dinner_1">Hello, </string>
     <string name="main_page_win_dinner_2">Are you ready to get your free dinner?</string>
     <string name="get_code">Get code</string>
     <string name="my_acount">My acount</string>
@@ -28,6 +29,7 @@
     <string name="impossible_to_send_email_toast">It is impossible to reset password</string>
     <string name="email_subject">MY MENU - Reset Password</string>
     <string name="email_body">New Password: 123456</string>
+    <string name="impossible_to_register_toast">It was impossible to register user</string>
 
     <string name="open">Open</string>
     <string name="close">Close</string>

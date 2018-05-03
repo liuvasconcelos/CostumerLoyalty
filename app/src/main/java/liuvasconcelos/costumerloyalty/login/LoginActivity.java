@@ -1,5 +1,7 @@
 package liuvasconcelos.costumerloyalty.login;
 
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
@@ -25,6 +27,10 @@ public class LoginActivity extends AppCompatActivity {
             ActivityUtils.addFragmentToActivity(getSupportFragmentManager(), loginFragment, R.id.login_content_frame);
         }
 
-        new LoginPresenter(loginFragment);
+        SQLiteDatabase database = this.openOrCreateDatabase(
+                "costumer-loyalty", Context.MODE_PRIVATE, null
+        );
+
+        new LoginPresenter(loginFragment, this, database);
     }
 }

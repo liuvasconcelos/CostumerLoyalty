@@ -9,6 +9,7 @@
         <variable
             name="handler"
             type="liuvasconcelos.costumerloyalty.mainPage.MainPageFragment"/>
+
     </data>
 
     <LinearLayout
@@ -24,18 +25,35 @@
             android:orientation="vertical"
             android:background="@color/introduction_page_color_background">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="40dp"
-                android:text="@string/main_page_win_dinner_1"
-                android:textColor="@color/white"
-                android:gravity="center"
-                android:textSize="25sp"
-                android:fontFamily="monospace"/>
+                android:orientation="horizontal">
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:layout_weight="1"
+                    android:text="@string/main_page_win_dinner_1"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textAlignment="textEnd"
+                    android:fontFamily="monospace"/>
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textAlignment="textStart"
+                    android:text="Usuário"
+                    android:fontFamily="monospace"/>
+            </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
