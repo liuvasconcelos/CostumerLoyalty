@@ -1,6 +1,7 @@
 package liuvasconcelos.costumerloyalty.login;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -31,6 +32,8 @@ public class LoginActivity extends AppCompatActivity {
                 "costumer-loyalty", Context.MODE_PRIVATE, null
         );
 
-        new LoginPresenter(loginFragment, this, database);
+        SharedPreferences.Editor sharedPreferencesEditor =  getSharedPreferences("app", MODE_PRIVATE).edit();
+
+        new LoginPresenter(loginFragment, this, database, sharedPreferencesEditor);
     }
 }

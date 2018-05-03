@@ -9,6 +9,6 @@ public interface MainPageContract {
     }
 
     interface Presenter extends BasePresenter {
-        //presenter methods
+        String getUserName();
     }
 }

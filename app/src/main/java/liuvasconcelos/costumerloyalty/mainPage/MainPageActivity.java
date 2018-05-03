@@ -1,5 +1,6 @@
 package liuvasconcelos.costumerloyalty.mainPage;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -28,13 +29,17 @@ public class MainPageActivity extends AppCompatActivity {
             ActivityUtils.addFragmentToActivity(getSupportFragmentManager(), mainPageFragment, R.id.main_page_content_frame);
         }
 
-        new MainPagePresenter(mainPageFragment);
+        SharedPreferences preferences = getSharedPreferences("app", MODE_PRIVATE);
+
+        new MainPagePresenter(mainPageFragment, preferences);
 
         if (mToolbar != null){
             setSupportActionBar(mToolbar);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowTitleEnabled(false);
         }
+
+
 
 //        mDrawer = new ActionBarDrawerToggle(this, mDrawer, mToolbar, R.string.open, R.string.close);
 //        mDrawer.setDrawerListener(mActionBarDrawerToggle);
